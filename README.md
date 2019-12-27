@@ -9,6 +9,7 @@ like this:
 ```
   require('./src/utils/js_prototype.js')();
 ```
+note: add this after restify/express calls (like use) and before the `server.listen`
 
 ## For front-end purposes 
 For front-end purposes you can cut code inside the module and paste in your .js file.
