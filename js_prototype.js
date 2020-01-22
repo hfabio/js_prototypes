@@ -1,11 +1,11 @@
 module.exports = (() => {
   /**
- * to clone an object.
- * @memberof Object
- * @example <caption>Example usage of obj.clone()</caption>
- * const obj_b = obja.clone();
- * @return {Object} Returns an object clone
- */
+   * to clone an object.
+   * @memberof Object
+   * @example <caption>Example usage of obj.clone()</caption>
+   * const obj_b = obja.clone();
+   * @return {Object} Returns an object clone
+  */
   Object.prototype.clone = function () {
     return JSON.parse(JSON.stringify(this))
   }
@@ -121,5 +121,17 @@ module.exports = (() => {
       }
       return Object.keys(return_object).map(e => return_object[e]);
     }
+  };
+  /**
+   * group data in array if is a simple data, or by key if is an object
+   * @memberof Array
+   * @example <caption>Example usage of Array.last()</caption>
+   * //returns the last position of array (in this case: [1, 2, 3, 4, 5 ] will return 5)
+   *  const data = [1, 2, 3, 4, 5 ]
+   *  data.last()
+   * @return {item} Last item in this array
+   */
+  Array.prototype.last = function() {
+    return this.slice(-1)[0];
   }
 })();
